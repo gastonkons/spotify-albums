@@ -1,0 +1,35 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.ts",
+    "build": "tsc . ../dist"
+  },
+  "keywords": [],
+  "author": "Gaston Konstantinides",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "2.8.13",
+    "@types/express": "4.17.17",
+    "@types/request-ip": "0.0.37",
+    "@typescript-eslint/eslint-plugin": "5.54.0",
+    "eslint": "8.35.0",
+    "eslint-config-standard-with-typescript": "34.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-n": "15.6.1",
+    "eslint-plugin-promise": "6.1.1",
+    "nodemon": "2.0.21",
+    "ts-node": "10.9.1",
+    "typescript": "4.9.5"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "16.0.3",
+    "express": "4.18.2",
+    "mysql2": "3.2.0",
+    "request-ip": "3.3.0",
+    "sequelize": "6.29.0"
+  }
+}

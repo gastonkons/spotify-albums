@@ -1,0 +1,25 @@
+{
+  "name": "spotify-albums",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "api",
+    "app"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=api",
+    "dev:app": "npm run dev --workspace=app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaskons/spotify-albums.git"
+  },
+  "keywords": [],
+  "author": "Gastón Konstantinides",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaskons/spotify-albums/issues"
+  },
+  "homepage": "https://github.com/gaskons/spotify-albums#readme"
+}
