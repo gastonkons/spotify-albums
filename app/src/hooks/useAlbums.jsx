@@ -1,11 +1,15 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { INITIAL_OFFSET, RANGE_OF_RESULTS } from '../constants'
 import { getAlbumsFromArtistName } from '../services/albums'
 
+const initialState = {
+  offset: INITIAL_OFFSET,
+  items: [],
+  total: 0
+}
 function useAlbums ({ artist }) {
-  const [albums, setAlbums] = useState({})
+  const [albums, setAlbums] = useState(initialState)
   const [loading, setLoading] = useState(false)
-  const currentArtist = useRef(null)
 
   useEffect(() => {
     let isLoading = false
@@ -34,7 +38,7 @@ function useAlbums ({ artist }) {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [albums.offset])
+  }, [albums.items])
 
   useEffect(() => {
     if (artist) {
@@ -42,14 +46,19 @@ function useAlbums ({ artist }) {
       getAlbumsFromArtistName({ name: artist, limit: RANGE_OF_RESULTS, offset: INITIAL_OFFSET })
         .then(data => {
           const { items } = data
-          if (items.length === 0) return
-          setAlbums(data)
-          currentArtist.current = items[0].artist
+          if (items.length === 0) {
+            setAlbums(initialState)
+          } else {
+            setAlbums(data)
+          }
+        })
+        .catch(e => {
+          setAlbums(initialState)
         })
         .finally(() => setLoading(false))
     } else {
       setLoading(false)
-      setAlbums({})
+      setAlbums(initialState)
     }
   }, [artist])
 
