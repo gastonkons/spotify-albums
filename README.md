@@ -25,8 +25,10 @@ Search for your favorite artists and find the best albums!
     ```bash
     npm install
     ```
+
+    > It will install the dependencies of both projects (app & api)
     
-4. Go to the .env file and set your database (MySQL) & spotify credentials to localhost
+4. Go to the .env file and set your database (mysql) & spotify credentials to localhost
       
       ```bash
       DB_DATABASE=spotify_albums
@@ -57,12 +59,16 @@ Search for your favorite artists and find the best albums!
   ```bash
   npm run dev:api
   ```
+
+  > This command will wake up the server
   
 3. Open a new terminal and run the following command:
   
   ```bash
   npm run dev:app
   ```
+
+  > This other command will raise the frontend
   
 4. By default, the application will start at the path 
 
