@@ -1,0 +1,35 @@
+.AlbumCard {
+  width: 100%;
+  max-width: 300px;
+  padding: 16px;
+  background-color: var(--color-primary);
+  /* background: var(--gradient); */
+  border-radius: 16px;
+  transition: all ease 200ms;
+  cursor: pointer;
+  box-shadow: 1px 10px 20px rgba(0, 0, 0, .2);
+}
+
+.AlbumCard:hover {
+  transform: scale(1.05)
+}
+
+.AlbumCard img {
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.AlbumCard>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0 16px 0;
+}
+
+.AlbumCard div span {
+  font-size: small;
+  max-width: 50%;
+  font-weight: 600;
+  color: var(--color-seccondary)
+}
