@@ -107,6 +107,6 @@ Search for your favorite artists and find the best albums!
 
 ## Expressions of Gratitude 🎁
 
-- Thanks to [Houlak!](https://houlak.com/) for giving me the opportunity
+- Thanks to [Houlak.](https://houlak.com/) for giving me the opportunity
 
 ---
