@@ -19,6 +19,13 @@ function Albums ({ artist, loading, setLoading }) {
 
   if (!artist || loading) return null
 
+  if (artist && albums.total === 0) {
+    return (
+    <div className='Albums'>
+      <h2>No se encontraron resultados 😢</h2>
+    </div>
+    )
+  }
   return (
     <div className='Albums'>
       <h2>Los más escuchados 🕺</h2>
