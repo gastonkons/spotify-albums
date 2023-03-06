@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/app.ts",
-    "build": "tsc . ../dist"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "Gaston Konstantinides",
