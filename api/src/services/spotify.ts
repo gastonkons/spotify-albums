@@ -67,7 +67,7 @@ export async function searchArtist( { value, limit, offset }: { value: string, l
   const { artists } = result
   const { items } = artists
   
-  if( items && items.length === 0) return null
+  if( !items || (items && items.length === 0)) return null
 
   const artist: ArtistType = {
     id: items[0].id,
