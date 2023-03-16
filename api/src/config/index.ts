@@ -14,6 +14,7 @@ const config = {
   spotify: {
     URL_TOKEN: "https://accounts.spotify.com/api/token",
     URL_API: "https://api.spotify.com/v1",
+    URL_CALLBACK: process.env.SPOTIFY_CALLBACK as string,
     CLIENT_ID: process.env.SPOTIFY_CLIENTID as string,
     CLIENT_SECRET: process.env.SPOTIFY_SECRET as string
   }

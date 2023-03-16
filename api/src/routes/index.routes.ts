@@ -2,6 +2,7 @@ import { Router } from 'express'
 
 import spotifySearchHistoryRoutes from './spotifySearchHistory'
 import spotifySearchesRoutes from './spotifySearches'
+import authRoutes from './auth'
 
 export enum Method {
   GET = 'GET',
@@ -12,6 +13,7 @@ export enum Method {
 
 const router = Router()
 
+router.use('/auth', authRoutes)
 router.use('/api/history', spotifySearchHistoryRoutes)
 router.use('/api/search', spotifySearchesRoutes)
 
